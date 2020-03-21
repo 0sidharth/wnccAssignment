@@ -52,7 +52,7 @@ for line in content:
                    out = 0
                    flag = 0
                    letter = 0
-        if (count % 4) == 0:
+        elif (count % 4) == 0:
             if i == ' ':
                 flag = 1
             elif flag == 1:
@@ -60,7 +60,7 @@ for line in content:
                if letter == 1:
                    out += int(i) * 60
                if letter == 3:
-                    out += int(i)
+                   out += int(i)
                if letter == 5:
                    out += int(i) * 0.1
                if letter == 6:
@@ -86,10 +86,10 @@ for i in real:
     if i > realAvg - realDev and i < realAvg + realDev:
         realCount = realCount + 1
 for i in sys:
-    if i > sysAvg - sysDev or i < sysAvg + sysDev:
+    if i > sysAvg - sysDev and i < sysAvg + sysDev:
         sysCount = sysCount + 1
-for i in real:
-    if i > userAvg - userDev or i < userAvg + userDev:
+for i in user:
+    if i > userAvg - userDev and i < userAvg + userDev:
         userCount = userCount + 1
 
 print "Number of runs: ", count / 4
